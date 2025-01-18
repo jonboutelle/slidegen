@@ -1,0 +1,13 @@
+{
+    "slides": [
+        {
+            "format": "CENTERED_TEXT_ONLY",
+            "text": "The Sea Power of the Future: An Examination of the Drone’s Impact on Maritime Dominance "
+        },
+        {
+            "format": "IMAGE_AND_TEXT_SIDE_BY_SIDE",
+            "text": "Gentlemen, the study of naval warfare is the study of enduring principles, not transient technologies. Sea power, as I have long argued, rests upon control of the sea lines of communication. This remains true even as the means of asserting that control evolves. The principles of concentration, of strategic position, of securing vital arteries – these are pillars that do not crumble with every passing novelty.",
+            "image": "example.png"
+        }
+    ]
+}
