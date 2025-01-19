@@ -41,3 +41,5 @@ wheels/
 # Project specific
 example.jpg
 example.png
+config.json
+images/

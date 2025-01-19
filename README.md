@@ -1,15 +1,25 @@
 # Slidegen
+This software generates full presentations in PPTX format from text prompts. 
 
-A Python-based PowerPoint presentation generator that creates slides from JSON input files using predefined templates and formats.
+1)COLLECT PRESENTATION PROMPT FROM USER
+A user starts out with a prompt to generation a presentation. Like "make a 10 page presentation about the impact of drones on warfare. Write it in the voice of Carl Von Clausewitz. The pictures should look like oil paintings." could be prompt. 
 
-## Features
+2)GENERATE PRESENTATION TEXT AND IMAGE PROMPTS
+We will send the prompt to an LLM, that will use the prompt to generate a JSON file that has 1)text for each slide, and 2)an image prompt for every slide.
+We will append our instructions to the prompt. "Try to generate an image prompt for each slide. But if you can't come up with something good just don't include it. For the text please generate less than 50 words of text per slide."
+TODO: DECIDE WHICH LLM TO USE (MAYBE TRY MULTIPLE IN PARALLEL TO START)
+TODO: EXTERNALIZE CREDENTIALS TO A FILE THAT WE DO NOT CHECK INTO SOURCE CONTROL (WE'LL USE OPENROUTER.AI FOR LLM AND IMAGE MODEL ACCESS)
 
-- Generate PowerPoint presentations from JSON configuration
-- Support for multiple slide formats:
-  - Image and text side by side
-  - Centered text only
-- Template-based generation
-- Customizable slide layouts
+3)GENERATE IMAGES FROM IMAGE PROMPTS
+We will send each image prompt to an image model and save the resulting image to file. We'll save the path of each image in the JSON, at the appropriate slide.
+TODO: DECIDE WHICH IMAGE MODEL TO USE (MAYBE TRY MULTIPLE IN PARALLEL TO START)
+
+4) GENERATE PPTX FROM IMAGES AND TEXT 
+We will generate a PPTX file from the text and images in the JSON file, using the python-pptx libary and the template.pptx file. (THIS PART IS ALREADY DONE)
+
+
+A Python-based PowerPoint presentation generator that creates slides from user prompts. JSON input files using predefined templates and formats.
+
 
 ## Requirements
 
